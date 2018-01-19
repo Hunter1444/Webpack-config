@@ -3,6 +3,14 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
+  devtool: 'eval-source-map',
+  entry: './src/index.js',
+  cache: true,
+  output: {
+    path: path.resolve(__dirname, 'bundle'),
+    publicPath : '/bundle/',
+    filename: 'bundle.js',
+  },
   devServer: {
     contentBase: path.join(__dirname, "./"),
     overlay: true,
@@ -12,18 +20,11 @@ module.exports = {
   plugins: [
     new UglifyJsPlugin({
       test: /\.js($|\?)/i,
-      cache: true
+      cache: true,
+      sourceMap: true
     }),
     new ProgressBarPlugin()
   ],
-  devtool: 'eval-source-map',
-  entry: './src/index.js',
-  cache: true,
-  output: {
-    path: path.resolve(__dirname, 'bundle'),
-    publicPath : '/bundle/',
-    filename: 'bundle.js',
-  },
   module: {
     rules: [
       {
