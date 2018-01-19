@@ -20,7 +20,7 @@ module.exports = {
   entry: './src/index.js',
   cache: true,
   output: {
-    path: path.resolve(__dirname, '/bundle/'),
+    path: path.resolve(__dirname, 'bundle'),
     publicPath : '/bundle/',
     filename: 'bundle.js',
   },
