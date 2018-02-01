@@ -1,0 +1,7 @@
+@import 'variables';
+
+body{
+  display:flex;
+  justify-content: center;
+  background:url('#{$imagePath}/warning.png') top center no-repeat;
+}

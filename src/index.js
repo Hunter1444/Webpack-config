@@ -1,11 +1,10 @@
-import styles from './scss/main.scss';
-import Profile from './Profile';
+import style from './scss/index.scss';
+import App from './containers/App';
 import ReactDOM from 'react-dom';
 import React from 'react';
-console.dir('gaga');
 
 
 ReactDOM.render(
-  <Profile/>,
+  <App/>,
   document.getElementById('root')
 );
