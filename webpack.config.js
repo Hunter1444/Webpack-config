@@ -7,7 +7,8 @@ const config = {
     contentBase: path.join(__dirname, "./"),
     overlay: true,
     port: 8080,
-    publicPath: "/bundle/"
+    publicPath: "/bundle/",
+    historyApiFallback: true
   },
   plugins: [
     new ProgressBarPlugin()

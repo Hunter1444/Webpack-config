@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --env.NODE_ENV=dev",
+    "start": "webpack-dev-server --env.NODE_ENV=dev --open",
     "build": "webpack --env.NODE_ENV=prod",
-    "watch": "webpack --watch",
+    "watch": "webpack --watch --env.NODE_ENV=dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
